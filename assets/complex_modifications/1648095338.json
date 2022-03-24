@@ -3,7 +3,7 @@
 	"rules": [
 		{
 			"description": "YY HHKB: press control alone -> escape",
-			"manipulators":[
+			"manipulators": [
 				{
 					"from": {
 						"key_code": "left_control",
@@ -122,11 +122,11 @@
 			]
 		},
 		{
-			"description": "Hai HHKB: fn+`,`=page_up, fn+`.`=page_down",
+			"description": "Hai HHKB: fn+`w`=page_up, fn+`s`=page_down",
 			"manipulators": [
 				{
 					"from": {
-						"key_code": "comma",
+						"key_code": "w",
 						"modifiers": {
 							"mandatory": [
 								"fn"
@@ -148,7 +148,7 @@
 				},
 				{
 					"from": {
-						"key_code": "period",
+						"key_code": "s",
 						"modifiers": {
 							"mandatory": [
 								"fn"
@@ -210,6 +210,49 @@
 			]
 		},
 		{
+			"description": "fn + [/] to move between spaces",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "open_bracket",
+						"modifiers": {
+							"mandatory": [
+								"fn"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "left_arrow",
+							"modifiers": [
+								"left_control"
+							]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "close_bracket",
+						"modifiers": {
+							"mandatory": [
+								"fn"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "right_arrow",
+							"modifiers": [
+								"left_control"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"description": "Hai HHKB: fn + 4 = F4",
 			"manipulators": [
 				{
@@ -227,6 +270,51 @@
 						}
 					],
 					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "fn + < > to scroll tabs.",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "comma",
+						"modifiers": {
+							"mandatory": [
+								"fn"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "left_arrow",
+							"modifiers": [
+								"left_command",
+								"left_option"
+							]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "period",
+						"modifiers": {
+							"mandatory": [
+								"fn"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "right_arrow",
+							"modifiers": [
+								"left_command",
+								"left_option"
+							]
+						}
+					]
 				}
 			]
 		},
